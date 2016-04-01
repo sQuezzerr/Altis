@@ -64,6 +64,12 @@ class CfgFunctions {
 
 	class TON_System {
 		tag = "TON";
+		
+		class Airdrop {
+			file = "\life_server\Functions\airdrop";
+			class generateAirdrop {};		
+		};
+		
 		class Systems {
 			file = "\life_server\Functions\Systems";
 			class managesc {};
