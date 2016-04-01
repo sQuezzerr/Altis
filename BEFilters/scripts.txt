@@ -18,3 +18,5 @@
 5 root_
 5 E5P
 5 Bossmode
+7 setvelocity !="_chute setVelocity _velocity;"
+7 setDamage !="_cargo setDamage 0;" 
