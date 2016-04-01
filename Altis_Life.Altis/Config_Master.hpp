@@ -6,7 +6,7 @@
 */
 class Life_Settings {
     /* Persistent Player Settings */
-    save_civ_weapons = false; //Allow civilians to save weapons on them?
+    save_civ_weapons = true; //Allow civilians to save weapons on them?
     save_virtualItems = true; //Save Virtual items (all sides)?
     save_playerStats = true; //Save food, water and damage (all sides)?
     save_civ_position = false; //Save civilian location?
@@ -14,7 +14,7 @@ class Life_Settings {
 
     /* Persistent Vehicle Settings */
     save_veh_virtualItems = false; //Save Virtual items for vehicles (all sides)?
-    save_veh_gear = false; //Save Gear for vehicles (all sides)?
+    save_veh_gear = true; //Save Gear for vehicles (all sides)?
     save_veh_fuel = false; //Save Vehicle fuel state
     save_veh_damage = false; //Save Vehicle Damage
     save_veh_items[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat" };
@@ -25,12 +25,15 @@ class Life_Settings {
     clothing_masks[] = { "H_Shemag_olive", "H_Shemag_khk", "H_Shemag_tan", "H_Shemag_olive_hs", "H_ShemagOpen_khk", "H_ShemagOpen_tan", "G_Balaclava_blk", "G_Balaclava_combat", "G_Balaclava_lowprofile", "G_Balaclava_oli", "G_Bandanna_aviator", "G_Bandanna_beast", "G_Bandanna_blk", "G_Bandanna_khk", "G_Bandanna_oli", "G_Bandanna_shades", "G_Bandanna_sport", "G_Bandanna_tan", "U_O_GhillieSuit", "U_I_GhillieSuit", "U_B_GhillieSuit", "H_RacingHelmet_1_black_F", "H_RacingHelmet_1_red_F", "H_RacingHelmet_1_white_F", "H_RacingHelmet_1_blue_F", "H_RacingHelmet_1_yellow_F", "H_RacingHelmet_1_green_F", "H_RacingHelmet_1_F", "H_RacingHelmet_2_F", "H_RacingHelmet_3_F", "H_RacingHelmet_4_F" };
 
     /* Cop related settings */
-    cops_online_min = 5; //minimum cops online for robbing a bank
+    cops_online_min = 1; //minimum cops online for robbing a bank
     seize_exempt[] = { "Binocular", "ItemWatch", "ItemCompass", "ItemGPS", "ItemMap", "NVGoggles", "FirstAidKit", "ToolKit", "Chemlight_red", "Chemlight_yellow", "Chemlight_green", "Chemlight_blue", "optic_ACO_grn_smg" };
     seize_uniform[] = { "U_Rangemaster" }; //Any specific uniforms you want to be seized from players
     seize_vest[] = { "V_TacVest_blk_POLICE" }; //Any specific vests you want to be seized from players
     seize_headgear[] = { "H_Cap_police" }; //Any hats or helmets you want seized from players
     seize_minimum_rank = 2; //Required minimum CopLevel to be able to seize items from players
+
+    /* Medic related settings*/
+    allow_medic_weapons = true; // true allows medics to hold/use weapons - false disallows
 
     /* Revive system settings */
     revive_cops = true; //true to enable cops the ability to revive everyone or false for only medics/ems.
@@ -50,13 +53,7 @@ class Life_Settings {
     /* Player-related systems */
     enable_fatigue = true; //Set to false to disable the ARMA 3 fatigue system.
     total_maxWeight = 24; //Static variable for the maximum weight allowed without having a backpack
-
-    /* Item-related restrictions */
-    restrict_medic_weapons = true; //Set to false to allow medics to use any weapon -true will remove ANY weapon they attempt to use (primary,secondary,launcher)
-    restrict_clothingPickup = true; //Set to false to allow civilians to pickup/take any uniform (ground/crates/vehicles)
-    restrict_weaponPickup = false; //Set to false to allow civilians to pickup/take any weapon (ground/crates/vehicles)
-    restricted_uniforms[] = { "U_Rangemaster", "U_B_CombatUniform_mcam_tshirt", "U_B_CombatUniform_mcam_worn", "U_B_survival_uniform" };
-    restricted_weapons[] = { "hgun_P07_snds_F", "arifle_MX_F", "arifle_MXC_F" };
+    paycheck_period = 5; //Scaled in minutes
 
     /* Impound Variables */
     impound_car = 350; //Price for impounding cars
@@ -64,12 +61,11 @@ class Life_Settings {
     impound_air = 850; //Price for impounding helicopters / planes
 
     /* Initial Bank Amount */
-    bank_cop = 7000; //Amount of cash on bank for new cops
-    bank_civ = 3000; //Amount of cash on bank for new civillians
-    bank_med = 6500; //Amount of cash on bank for new medics
+    bank_cop = 70000; //Amount of cash on bank for new cops
+    bank_civ = 50000; //Amount of cash on bank for new civillians
+    bank_med = 65000; //Amount of cash on bank for new medics
 
-    /* Paycheck Settings */
-    paycheck_period = 5; //Scaled in minutes
+    /* Paycheck Amount */
     paycheck_cop = 500; //Payment for cops
     paycheck_civ = 350; //Payment for civillians
     paycheck_med = 450; //Payment for medics
@@ -78,13 +74,13 @@ class Life_Settings {
     noatm_timer = 10; //Time in minutes that players won't be able to deposit his money after selling stolen gold
 
     /* Spyglass settings */
-    spyglass_init = true; //Enable or disable spyglass
+    spyglass_init = false; //Enable or disable spyglass
 
     /* ATM settings */
     global_ATM = true; //Allow users to access any ATM on the map.
 
     /* Fuel Station & Heli Service settings */
-    Pump_service = false; //Allow users to use pump service on the map. Default = false
+    Pump_service = true; //Allow users to use pump service on the map. Default = false
     fuel_cost = 80; //Cost of fuel per liter at fuel stations (if not defined for the vehicle already).
     service_chopper = 1000; //Cost to service chopper at chopper service station.
 
@@ -95,7 +91,7 @@ class Life_Settings {
     vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F", "B_Boat_Armed_01_minigun_F" };
     vehicleShop_BuyMultiplier = 1.5;
     vehicleGarage_SellMultiplier = 0.75;
-    vehicleGarage_StoreFeeMultiplier = 0.2;
+    vehicleGarage_StorFeeMultiplier = 0.2;
     vehicleChopShop_Multiplier = 0.5;
 
     /* Job-related stuff */

@@ -4149,6 +4149,14 @@
     </Key>
   </Package>
   <Package name="Life_License">
+	<Key ID="STR_License_Hunting">
+      <Original>Hunting License</Original>
+      <German>Jagdschein</German>
+      <French>Hunting License</French>
+      <Italian>Hunting License</Italian>
+      <Portuguese>Hunting License</Portuguese>
+      <Polish>Hunting License</Polish>
+    </Key>
     <Key ID="STR_License_Driver">
       <Original>Driver License</Original>
       <German>Führerschein</German>
