@@ -148,3 +148,5 @@ if(life_HC_isActive) then {
 } else {
 	[getPlayerUID player,player getVariable["realname",name player]] remoteExec ["life_fnc_wantedProfUpdate",RSERV];
 };
+
+[] execVM "scripts\spawncam.sqf";

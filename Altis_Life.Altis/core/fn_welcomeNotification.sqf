@@ -27,8 +27,10 @@ _text2 = _display displayCtrl 1102;
 _message = "";
 _message = _message + "<t align='center' size='8' shadow='0'><img image='textures\armalife.jpg' /></t><br /><br />";
 _message = _message + "Useful Links (click on the links to open your browser)<br /><br />";
-_message = _message + " <a href='https://github.com/ArmaLife/Altis' color='#56BDD6'>ArmaLife</a> -- Our Website, check it out for the latest news and updates.<br /><br />";
-_message = _message + "Teamspeak 3 Address: ADDRESS HERE  <br /><br />";
+_message = _message + " Willkommen auf unserem Altis Life Server!<br /><br />";
+_message = _message + " Hier wird Roleplay gespielt, wer sich nicht benimmt oder an die<br />";
+_message = _message + " Serverregeln hält wird ohne Vorwarnung gekickt!<br /><br />";
+_message = _message + "Teamspeak 3 Addresse: 89.163.146.171 <br /><br />";
 
 
 //Fill only the first text
